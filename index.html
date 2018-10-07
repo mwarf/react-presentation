@@ -4,13 +4,17 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Coalbanks Presentation Template</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/coalbanks.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
+		<!-- get some fontawesome up in here-->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+
 
 		<!-- Printing and PDF exports -->
 		<script>
@@ -24,10 +28,37 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>
-					Slide three
+				<section class="has-dark-background" data-markdown data-background-image="../images/Flat-Mountains.svg">
+					<textarea data-template>
+						# Embracing Change
+						#### Content Delivery Recommendations
+						**Michael Warf**, Manager, Digital Services
+						<aside class="notes">
+								Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+							</aside>
+						</textarea>
+						
 				</section>
-				<section>Slide 2</section>
+
+				<section data-markdown>
+					<textarea data-template>
+						<canvas data-chart="line">
+								Month, January, February, March, April, May, June, July
+								My first dataset, 65, 59, 80, 81, 56, 55, 40
+								My second dataset, 28, 48, 40, 19, 86, 27, 90
+								</canvas>
+							<aside class="notes">
+							Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit »S« on your keyboard).
+							</aside>
+					</textarea>
+				</section>
+				<section data-background-iframe="https://slides.com" data-background-interactive>
+					<h2>Iframe</h2>
+				</section>
+				<section data-background-iframe="https://slides.com" data-background-interactive>
+					<h2>Iframe</h2>
+				</section>
+
 			</div>
 		</div>
 
@@ -39,10 +70,15 @@
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+				// Flags if speaker notes should be visible to all viewers
+				showNotes: false,
+				previewLinks: false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/chart/Chart.min.js' },				
+					{ src: 'plugin/chart/csv2chart.js' },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
